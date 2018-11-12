@@ -2,12 +2,13 @@ window.onload = function() {
     var search = document.getElementById("search_btn");
     var httpRequest;
     var response;
+    
     search.addEventListener("click", function(e) {
         e.preventDefault();
         
         httpRequest = new XMLHttpRequest();
-
-        var url = "request.php?q=definition";
+        var searchWord=document.getElementById("search_form").elements.namedItem("lookup_word").value;
+        var url = `request.php?q=${searchWord}`;
         httpRequest.onreadystatechange = getDefn;
         httpRequest.open('GET', url);
         httpRequest.send();
@@ -16,12 +17,11 @@ window.onload = function() {
          if (httpRequest.readyState === XMLHttpRequest.DONE) {
              if (httpRequest.status === 200) {
                 response = httpRequest.responseText;
-                var defns = document.querySelector('#defns');
+                var result = document.querySelector('#result');
                 //var res=response.replace(/(<([^>]+)>)/ig,"");
-                var res=striptags(response);
-                // defns.innerHTML=response;
-                // alert(response);
-                alert(res);
+                //var res=striptags(response);
+                result.innerHTML=response;
+                
               } else {
                 alert('There was a problem with the request.');
               }

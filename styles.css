@@ -6,7 +6,15 @@ h1{
     background-color: purple;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: honeydew;
-    text-indent: 20px;
+    /*text-indent: 20px;*/
     margin: 0px;
-    padding: 40px 0px;
+    padding: 40px 20px;
+}
+#search_menu{
+    background-color: #ff4dd2;
+    padding: 10px 0px 0px 20px;
+    margin-top: 15px;
+}
+#result{
+    min-height: 300px;
 }
