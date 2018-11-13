@@ -1,5 +1,8 @@
 body{
-    background-color: white;
+    background-color: #ffccff;
+    align-content: center;
+    font-size: 1.2em;
+    
 }
 
 h1{
@@ -9,12 +12,38 @@ h1{
     /*text-indent: 20px;*/
     margin: 0px;
     padding: 40px 20px;
+    font-weight:bold;
+    text-align: center;
+    
 }
 #search_menu{
     background-color: #ff4dd2;
     padding: 10px 0px 0px 20px;
     margin-top: 15px;
 }
-#result{
-    min-height: 300px;
+#results{
+    min-height: 200px;
+}
+
+#dict{
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.sbtn{
+    background-color: purple;
+    color: #ffb3d9;   
+    border-radius: 5px;
+    font-size: 18px;
+    
+}
+
+#lookup_word{
+    height: 22px;
+    width: 300px;
+}
+
+h2{
+    text-decoration: underline;
 }
